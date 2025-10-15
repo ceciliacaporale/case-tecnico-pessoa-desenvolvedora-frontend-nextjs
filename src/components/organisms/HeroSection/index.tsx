@@ -1,12 +1,11 @@
 import Image from 'next/image'
 import BackgroundColor from '@/components/atoms/BackgroundColor';
+import TypeWriter from '@/components/animations/TypeWriter';
 
 export function HeroSection() {
   return (
     <section className="relative flex flex-col items-center justify-center text-center min-h-screen">
       <BackgroundColor />
-
-      {/* decidir se coloca rounded-full bg-gradient-to-r from-purple-400 to-primary p-1 com animacao :) */}
 
       <div className="">
         <Image
@@ -20,8 +19,7 @@ export function HeroSection() {
       </div>
 
       <p className="mt-4 font-heading text-[16px] text-primary">
-        Olá, meu nome é Fernanda
-        <span className="animate-blink font-sans text-primary">_</span>
+        <TypeWriter text="Olá, meu nome é Fernanda" typingSpeed={60} />
       </p>
 
       <h1 className="max-w-3xl mt-4 font-heading text-[60px] font-bold text-foreground">
@@ -38,7 +36,7 @@ export function HeroSection() {
         desenvolvi!
       </p>
 
-      <div className="w-[80%] mb-10 lg:w-[686px] h-[28px] mx-auto flex animate-fade-up">
+       <div className="w-[80%] mb-10 lg:w-[686px] h-[28px] mx-auto flex animate-fade-up">
         <div>
           <div className="w-[28px] h-[1px] bg-primary"></div>
           <div className="w-[1px] h-full bg-primary"></div>
