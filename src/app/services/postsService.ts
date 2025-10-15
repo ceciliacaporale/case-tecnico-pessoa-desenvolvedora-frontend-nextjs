@@ -2,6 +2,10 @@ import type { PostsApiResponse, PostApiResponse } from '../types';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
+if (!API_BASE_URL) {
+  throw new Error('A variável de ambiente NEXT_PUBLIC_API_BASE_URL não está definida.');
+}
+
 interface FetchPostsOptions {
   page?: number;
   limit?: number;
@@ -13,7 +17,7 @@ export async function getAllPosts(options: FetchPostsOptions = {}): Promise<Post
   const { page = 1, limit = 6, category, tag } = options;
 
   let url = `${API_BASE_URL}/posts`;
-  
+
   if (category) {
     url = `${API_BASE_URL}/posts/category/${category}`;
   } else if (tag) {
@@ -28,17 +32,15 @@ export async function getAllPosts(options: FetchPostsOptions = {}): Promise<Post
   const finalUrl = `${url}?${queryParams.toString()}`;
 
   try {
-    const response = await fetch(finalUrl, {
-      cache: 'no-store', 
-    });
+    const response = await fetch(finalUrl, { cache: 'no-store' });
 
     if (!response.ok) {
       throw new Error(`Erro na API: ${response.statusText}`);
     }
 
-    return await response.json() as PostsApiResponse;
+    return (await response.json()) as PostsApiResponse;
   } catch (error) {
-    console.error("Falha ao buscar postagens:", error);
+    console.error('Falha ao buscar postagens:', error);
     throw new Error('Não foi possível carregar as postagens.');
   }
 }
@@ -53,7 +55,7 @@ export async function getPostById(id: string): Promise<PostApiResponse> {
       throw new Error(`Erro na API: ${response.statusText}`);
     }
 
-    return await response.json() as PostApiResponse;
+    return (await response.json()) as PostApiResponse;
   } catch (error) {
     console.error(`Falha ao buscar postagem com ID ${id}:`, error);
     throw new Error('Não foi possível carregar a postagem.');
