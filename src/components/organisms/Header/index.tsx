@@ -1,5 +1,8 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/molecules/ThemeToggle';
 import { LogoIcon } from '@/components/atoms/LogoIcon';
 
@@ -9,15 +12,17 @@ const navLinks = [
 ];
 
 export const Header = () => {
+  const pathname = usePathname();
+
   return (
     <header className="flex w-full items-center justify-between px-8 py-6 sm:px-20">
       <div className="flex items-center gap-3">
-      <Link href="/" className="flex items-center gap-3">
-        <LogoIcon />
-        <span className="font-heading text-[24px] font-bold uppercase text-foreground">
-          Fernanda Mascheti
-        </span>
-      </Link>
+        <Link href="/" className="flex items-center gap-3">
+          <LogoIcon />
+          <span className="font-heading text-[24px] font-bold uppercase text-foreground">
+            Fernanda Mascheti
+          </span>
+        </Link>
       </div>
 
       <div className="flex items-center gap-8">
@@ -27,7 +32,11 @@ export const Header = () => {
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="font-heading text-[24px] font-bold text-foreground transition-colors hover:text-primary"
+                  className={`font-heading text-[24px] font-bold transition-colors ${
+                    pathname === link.href
+                      ? 'text-primary'
+                      : 'text-foreground hover:text-primary'
+                  }`}
                 >
                   {link.label}
                 </Link>
