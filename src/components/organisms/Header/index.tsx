@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { ThemeToggle } from '@/components/molecules/ThemeToggle';
 import { LogoIcon } from '@/components/atoms/LogoIcon';
 
 const navLinks = [
@@ -32,6 +33,7 @@ export const Header = () => {
             ))}
           </ul>
         </nav>
+        <ThemeToggle />
       </div>
     </header>
   );
