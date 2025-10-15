@@ -12,10 +12,12 @@ export const Header = () => {
   return (
     <header className="flex w-full items-center justify-between px-8 py-6 sm:px-20">
       <div className="flex items-center gap-3">
+      <Link href="/" className="flex items-center gap-3">
         <LogoIcon />
         <span className="font-heading text-[24px] font-bold uppercase text-foreground">
           Fernanda Mascheti
         </span>
+      </Link>
       </div>
 
       <div className="flex items-center gap-8">
