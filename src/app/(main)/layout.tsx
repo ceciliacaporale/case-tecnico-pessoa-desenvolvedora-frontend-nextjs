@@ -2,6 +2,7 @@ import '../globals.css'
 import { Inter, Chakra_Petch } from 'next/font/google'
 import { ReactNode } from 'react'
 import { Header } from '../../components/organisms/Header'
+import { Footer } from '@/components/organisms/Footer'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,9 +29,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="flex-grow px-8 py-6 sm:px-20">
             {children}
           </main>
+          <Footer />
         </div>
       </body>
     </html>
   )
 }
-
