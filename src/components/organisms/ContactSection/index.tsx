@@ -22,7 +22,7 @@ const contactLinks = [
 
 export const ContactSection = () => {
   return (
-    <section className="bg-background sm:px-20">
+    <section className="sm:px-20">
       <div className="container mx-auto">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-center">
           <div>

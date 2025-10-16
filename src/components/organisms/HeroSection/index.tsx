@@ -18,18 +18,18 @@ export function HeroSection() {
         />
       </div>
 
-      <p className="mt-4 font-heading text-[16px] text-primary">
+      <p className="mt-4 font-heading text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-primary">
         <TypeWriter text="Olá, meu nome é Fernanda" typingSpeed={60} />
-      </p>
+     </p>
 
-      <h1 className="max-w-3xl mt-4 font-heading text-[60px] font-bold text-foreground">
+    <h1 className="max-w-3xl mt-4 font-heading text-[36px] sm:text-[45px] md:text-[50px] lg:text-[60px] font-bold text-foreground">
         Eu ensino{' '}
         <span className="bg-gradient-to-r from-purple-400 to-primary bg-clip-text text-transparent">
-          Programação
+            Programação
         </span>
-      </h1>
+    </h1>
 
-      <p className="mb-24 max-w-xl font-inter text-[16px] text-muted-foreground">
+      <p className="mb-24 max-w-xl font-inter text-[14px] sm:text-[16px] md:text-[18px] text-muted-foreground">
         Sou Engenheira de Computação e Pedagoga. Ensino pensamento computacional
         para estudantes do Ensino Fundamental e Médio. Ensino sobre pensamento
         computacional usando HTML, CSS e JavaScript. Veja os projetos que já
