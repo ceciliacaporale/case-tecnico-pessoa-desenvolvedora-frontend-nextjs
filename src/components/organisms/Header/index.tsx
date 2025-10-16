@@ -17,7 +17,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className='flex w-full items-center justify-between px-4 py-4 sm:px-8 md:px-16 lg:px-20 relative z-50 bg-background'>
+    <header className='flex w-full items-center justify-between px-4 py-4 sm:px-8 md:px-16 lg:px-20 md:mt-6 lg:mt-6 relative z-50 bg-background'>
       <div className='flex items-center gap-3'>
         <Link href='/' className='flex items-center gap-3'>
           <LogoIcon />
@@ -54,7 +54,11 @@ export const Header = () => {
           className='focus:outline-none'
           aria-label='Menu'
         >
-          {isOpen ? <X className='w-6 h-6 text-foreground' /> : <Menu className='w-6 h-6 text-foreground' />}
+          {isOpen ? (
+            <X className='w-6 h-6 text-foreground' />
+          ) : (
+            <Menu className='w-6 h-6 text-foreground' />
+          )}
         </button>
       </div>
 
