@@ -44,8 +44,7 @@ export const Tag: React.FC<TagProps> = ({
       : `
         bg-transparent text-primary
         border border-primary
-        hover:bg-primary/10
-        dark:text-primary dark:border-primary dark:hover:bg-primary/20
+        dark:text-primary dark:border-primary
       `;
 
   return (
