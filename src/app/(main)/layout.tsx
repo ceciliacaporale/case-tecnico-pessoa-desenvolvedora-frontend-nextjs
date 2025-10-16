@@ -6,27 +6,28 @@ import { Footer } from '@/components/organisms/Footer'
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400', '700'],
   variable: '--font-inter',
-})
+});
+
 const chakraPetch = Chakra_Petch({
   subsets: ['latin'],
-  weight: ['700'],
+  weight: ['400', '700'],
   variable: '--font-chakra-petch',
-})
+});
 
 export const metadata = {
   title: 'Fernanda Mascheti',
-  description: 'pensar no que colocar aqui',
+  description: 'Sou Engenheira de Computação e Pedagoga. Ensino pensamento computacional para estudantes do Ensino Fundamental e Médio. Ensino sobre pensamento computacional usando HTML, CSS e JavaScript.',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${chakraPetch.variable}`}>
-      <body className="text-foreground">
+      <body>
         <div className="flex min-h-screen flex-col">
           <Header />
-          <main className="flex-grow px-8 py-6 sm:px-20">
+          <main className="flex-1">
             {children}
           </main>
           <Footer />
