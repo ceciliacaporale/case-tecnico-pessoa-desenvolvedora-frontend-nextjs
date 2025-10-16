@@ -48,12 +48,12 @@ export default function PostCard({ post }: CardProps) {
         <p className="text-muted-foreground text-[16px] line-clamp-4">
           {post.content}
         </p>
-        <Link 
+        <a 
           href={`/blog/${post.id}`} 
           className="text-primary text-[16px] font-bold hover:underline inline-block mt-4"
         >
           Ler mais
-        </Link>
+        </a>
       </div>
   );
 }
