@@ -22,7 +22,7 @@ const contactLinks = [
 
 export const ContactSection = () => {
   return (
-    <section className= "bg-background sm:px-20">
+    <section className="bg-background sm:px-20">
       <div className="container mx-auto">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-center">
           <div>
@@ -40,8 +40,12 @@ export const ContactSection = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground transition-colors hover:text-primary"
                 >
-                  {link.icon}
-                  <span className="underline">{link.label}</span>
+                  <span className="transition-transform duration-200 transform hover:-translate-y-1 hover:scale-100">
+                    {link.icon}
+                  </span>
+                  <span className={link.label.includes('@') ? '' : 'underline'}>
+                    {link.label}
+                  </span>
                 </Link>
               </li>
             ))}
