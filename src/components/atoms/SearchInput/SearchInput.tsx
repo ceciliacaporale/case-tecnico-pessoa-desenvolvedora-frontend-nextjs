@@ -3,7 +3,7 @@ import React from "react";
 
 interface SearchInputProps {
   value: string;
-  onChange: (value: string) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   className?: string;
 }
@@ -21,7 +21,7 @@ export default function SearchInput({
       <input
         type="text"
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange= {onChange}
         placeholder={placeholder}
         aria-label="Campo de busca"
         className="w-full h-full px-3 pr-10 bg-transparent outline-none text-foreground placeholder:text-muted-foreground font-sans font-normal text-[16px] leading-[150%] align-middle"

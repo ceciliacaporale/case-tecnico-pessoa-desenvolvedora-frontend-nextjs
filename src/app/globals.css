@@ -4,13 +4,13 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-chakra-petch), ui-sans-serif, system-ui, sans-serif;
   
-  --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(211 41% 27%);
-  --color-primary: hsl(191 75% 45%);
-  --color-primary-foreground: hsl(0 0% 100%);
+  --color-foreground: #284260;
+  --color-primary: #1CA7C8;
+  --color-primary-foreground: #FFFFFF;
   --color-card: hsl(0 0% 100%);
   --color-card-foreground: hsl(211 41% 27%);
-  --color-muted-foreground: hsl(212 21% 52%);
+  --color-muted-foreground: #6e859f;
+  --color-neutral:#9D9D9D;
 }
 
 .dark {
@@ -18,9 +18,18 @@
   --color-foreground: hsl(0 0% 98%);
   --color-card: hsl(211 41% 15%);
   --color-card-foreground: hsl(0 0% 98%);
-  --color-primary: hsl(191 75% 55%);
-  --color-primary-foreground: hsl(211 41% 10%);
-  --color-muted-foreground: hsl(212 21% 65%);
+  --color-primary: #1CA7C8;
+  --color-primary-foreground: #0f1924;
+  --color-muted-foreground: #8fa1b8;
+  --color-neutral:#9D9D9D;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes blink {
@@ -31,4 +40,8 @@
 
 .animate-blink {
   animation: blink 1s step-end infinite;
+}
+
+html {
+  scroll-behavior: smooth;
 }
