@@ -35,6 +35,12 @@ const defaultMeta: PostMeta = {
     seed: 'fallback-data',
 };
 
+
+export const getPostsByCategory = cache(async (categorySlug: string): Promise<FullPost[]> => {
+  const data = await fetchApi<PostsApiResponse>(`/category/${categorySlug}`);
+  return data?.posts || [];
+});
+
 export const getPosts = cache(
   async (page: number = 1, limit: number = 9): Promise<PostsApiResponse> => {
     const data = await fetchApi<PostsApiResponse>(`?page=${page}&limit=${limit}`);
