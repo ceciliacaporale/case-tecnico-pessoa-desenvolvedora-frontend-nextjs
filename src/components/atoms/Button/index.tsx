@@ -28,9 +28,6 @@ export interface ButtonProps
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, size, ...props }, ref) => {
     const ghostStyles = `
-      bg-transparent
-      hover:bg-foreground/5
-      dark:text-primary
       dark:hover:bg-foreground/10
       font-inter
       font-bold
