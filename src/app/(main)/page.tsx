@@ -10,7 +10,7 @@ export default async function Home() {
 console.log(">>>>>>>:", initialData);
   return (
     <div className="min-h-screen">
-      <main className="container mx-auto px-4">
+      <main className="container mx-auto">
         <HeroSection />
         
        <BlogSection initialPosts={allPosts} />
