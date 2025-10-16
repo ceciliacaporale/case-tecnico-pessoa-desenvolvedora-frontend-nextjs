@@ -1,4 +1,4 @@
-import { getPostById, getAllPosts } from "@/app/services/posts.service";
+import { getPostById, getPostsByCategory } from "@/app/services/posts.service";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import HeroBlog from "@/components/organisms/HeroBlog";
@@ -6,41 +6,41 @@ import RelatedPostsSection from "@/components/organisms/RelatedPostsSection";
 import BackgroundColor from "@/components/atoms/BackgroundColor";
 
 interface PostPageProps {
-  params: {
-    id: string;
-  };
+  params: { id: string } | Promise<{ id: string }>;
 }
 
-export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
-  const post = await getPostById(params.id);
+export async function generateMetadata(props: PostPageProps): Promise<Metadata> {
+  const { id } = await props.params;
+  const post = await getPostById(id);
+
   if (!post) {
     return { title: "Post não encontrado" };
   }
+
   return {
     title: post.title,
     description: post.content.substring(0, 160),
   };
 }
 
-export default async function PostPage({ params }: PostPageProps) {
-  const post = await getPostById(params.id);
+export default async function PostPage(props: PostPageProps) {
+  const { id } = await props.params; 
+  const post = await getPostById(id);
 
   if (!post) {
     notFound();
   }
 
-  const allPosts = await getAllPosts();
-  const relatedPosts = allPosts
-    .filter(p => p.category.slug === post.category.slug && p.id !== post.id)
+  const relatedPostsByCategory = await getPostsByCategory(post.category.slug);
+  const relatedPosts = relatedPostsByCategory
+    .filter(p => p.id !== post.id)
     .slice(0, 3);
 
   return (
-    <>
+    <main className="relative overflow-x-hidden">
+      <BackgroundColor className="top-0" />
       <HeroBlog post={post} />
-      <BackgroundColor className="absolute top-1/2 left-1/2 -translate-x-1/3 -translate-y-1/2" />
       <RelatedPostsSection posts={relatedPosts} />
-      <BackgroundColor className="absolute top-1/7 left-1/2 -translate-x-1/7 -translate-y-1/7" />
-
-    </>
+    </main>
   );
 }
