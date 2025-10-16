@@ -22,6 +22,8 @@ export const Tag: React.FC<TagProps> = ({
     rounded-[4px]
     text-[16px] leading-[150%] font-sans font-bold
     transition-colors duration-200
+    md:text-[14px] md:px-3 md:py-1.5
+    sm:text-[12px] sm:px-2 sm:py-1
   `;
 
   const interactiveStyles = onClick ? "cursor-pointer" : "";

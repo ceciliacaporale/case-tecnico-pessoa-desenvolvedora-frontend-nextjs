@@ -29,7 +29,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, size, ...props }, ref) => {
     const ghostStyles = `
       bg-transparent
-      text-primary
       hover:bg-foreground/5
       dark:text-primary
       dark:hover:bg-foreground/10
@@ -45,7 +44,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         ref={ref}
-        className={cn(buttonVariants({ size, className }), ghostStyles)}
+        className={cn(ghostStyles, buttonVariants({ size, className }))}
         {...props}
       />
     );

@@ -18,11 +18,11 @@ export function HeroSection() {
         />
       </div>
 
-      <p className="mt-4 font-heading text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-primary">
+      <p className="mt-4 font-heading font-bold text-[16px] text-primary">
         <TypeWriter text="Olá, meu nome é Fernanda" typingSpeed={60} />
      </p>
 
-    <h1 className="max-w-3xl mt-4 font-heading text-[36px] sm:text-[45px] md:text-[50px] lg:text-[60px] font-bold text-foreground">
+    <h1 className="max-w-3xl mt-4 font-heading text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-bold text-foreground">
         Eu ensino{' '}
         <span className="bg-gradient-to-r from-purple-400 to-primary bg-clip-text text-transparent">
             Programação
