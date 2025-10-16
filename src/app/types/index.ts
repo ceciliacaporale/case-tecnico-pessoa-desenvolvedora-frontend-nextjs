@@ -1,24 +1,29 @@
-export interface Tag {
-  slug: string;
-  name: string;
-}
-
-export interface Category {
+export interface PostCategory {
   slug: string;
   name: string;
   description: string;
 }
 
-export interface Post {
+export interface PostTag {
+  slug: string;
+  name: string;
+}
+
+export interface FullPost {
   id: string;
   title: string;
   content: string;
   author: string;
   createdAt: string;
   likes: number;
-  category: Category;
-  tags: Tag[];
+  category: PostCategory;
+  tags: PostTag[];
   imageUrl: string;
+}
+
+export interface PostMeta {
+  generatedAt: string;
+  seed: string;
 }
 
 export interface Pagination {
@@ -31,10 +36,15 @@ export interface Pagination {
 }
 
 export interface PostsApiResponse {
-  posts: Post[];
+  posts: FullPost[];
   pagination: Pagination;
+  meta: PostMeta;
 }
 
-export interface PostApiResponse {
-  post: Post;
+export interface SinglePostApiResponse {
+  post: FullPost;
+  meta: {
+    generatedAt: string;
+    seed: string;
+  };
 }
