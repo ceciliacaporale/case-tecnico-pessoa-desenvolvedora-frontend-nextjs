@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${chakraPetch.variable}`}>
-      <body className="bg-background text-foreground">
+      <body className="text-foreground">
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-grow px-8 py-6 sm:px-20">

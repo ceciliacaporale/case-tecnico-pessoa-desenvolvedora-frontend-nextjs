@@ -10,8 +10,8 @@ export const CardTag: React.FC<CardTagProps> = ({ text, className = "" }) => {
     <span
       className={`
         absolute
+        bottom-0 right-0
         w-[130px] h-[30px]
-        top-[190px] left-[227px]
         flex items-center justify-center
         text-[14px] leading-[100%] tracking-[0%] text-center
         font-heading font-thin

@@ -16,7 +16,7 @@ export default function SearchInput({
 }: SearchInputProps) {
   return (
     <div
-      className={`relative flex items-center w-full lg:w-72 xl:w-80 h-10 rounded-md border border-primary dark:border-primary-dark bg-background text-foreground shadow-sm focus-within:ring-2 focus-within:ring-primary/50 transition-all ${className}`}
+      className={`relative flex items-center w-full lg:w-72 xl:w-80 h-10 rounded-md border border-primary dark:border-primary-dark bg-primary-foreground text-foreground shadow-sm focus-within:ring-2 focus-within:ring-primary/50 transition-all ${className}`}
     >
       <input
         type="text"
