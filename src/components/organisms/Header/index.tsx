@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ThemeToggle } from '@/components/molecules/ThemeToggle';
-import { LogoIcon } from '@/components/atoms/LogoIcon';
 import { Menu, X } from 'lucide-react';
+import { LogoIcon } from '@/components/atoms/LogoIcon';
+import { ThemeToggle } from '@/components/molecules/ThemeToggle';
 
 const navLinks = [
   { href: '/', label: 'Início' },
@@ -37,14 +37,14 @@ export const Header = () => {
 
             return (
               <li key={link.label}>
-                <Link
+                <a
                   href={link.href}
                   className={`font-heading text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-bold transition-colors ${
                     isActive ? 'text-primary' : 'text-foreground hover:text-primary'
                   }`}
                 >
                   {link.label}
-                </Link>
+                </a>
               </li>
             );
           })}
@@ -74,7 +74,7 @@ export const Header = () => {
 
               return (
                 <li key={link.label}>
-                  <Link
+                  <a
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={`font-heading text-[20px] font-bold transition-colors ${
@@ -82,7 +82,7 @@ export const Header = () => {
                     }`}
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               );
             })}
