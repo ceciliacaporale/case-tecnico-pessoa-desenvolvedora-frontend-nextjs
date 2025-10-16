@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ThemeToggle } from '@/components/molecules/ThemeToggle/ThemeToggle';
+import { ThemeToggle } from '@/components/molecules/ThemeToggle';
 import { LogoIcon } from '@/components/atoms/LogoIcon';
 import { Menu, X } from 'lucide-react';
 

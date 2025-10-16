@@ -26,7 +26,6 @@ export const ThemeToggle = () => {
   return (
     <Button
       onClick={toggleTheme}
-      variant="ghost"
       size="icon"
       aria-label="Alternar tema"
       className="transition-colors hover:text-primary"
