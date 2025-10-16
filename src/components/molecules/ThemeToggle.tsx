@@ -29,6 +29,7 @@ export const ThemeToggle = () => {
       variant="ghost"
       size="icon"
       aria-label="Alternar tema"
+      className="transition-colors hover:text-primary"
     >
       {theme === 'light' ? (
         <Moon className="h-5 w-5" />

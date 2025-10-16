@@ -4,7 +4,7 @@ import TypeWriter from '@/components/animations/TypeWriter';
 
 export function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center min-h-screen">
+    <section className="relative flex flex-col items-center justify-center text-center">
       <BackgroundColor />
 
       <div className="">
