@@ -36,7 +36,7 @@ export function HeroSection() {
         desenvolvi!
       </p>
 
-       <div className="w-[80%] mb-12 lg:w-[686px] h-[28px] mx-auto flex animate-fade-up">
+       <div className="w-[80%] mb-16 lg:w-[686px] h-[28px] mx-auto flex animate-fade-up">
         <div>
           <div className="w-[28px] h-[1px] bg-primary"></div>
           <div className="w-[1px] h-full bg-primary"></div>
