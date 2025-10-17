@@ -6,6 +6,11 @@ A aplicação consome uma API fake fornecida pela Alura para exibir posts, imple
 
 [Produção](https://case-tecnico-pessoa-desenvolvedora.vercel.app/)
 
+## Preview 
+
+![Preview](./.github/assets/preview.png)
+
+
 ## ✨ Funcionalidades Implementadas
 
 Seguindo os requisitos do desafio, a aplicação conta com as seguintes features:
