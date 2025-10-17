@@ -1,6 +1,6 @@
-import { HeroSection } from "../../components/organisms/HeroSection";
-import { ContactSection } from "../../components/organisms/ContactSection";
-import { BlogSection } from "../../components/organisms/BlogSection";
+import { HeroSection } from "../../components/sections/HeroSection";
+import { ContactSection } from "../../components/sections/ContactSection";
+import { BlogSection } from "../../components/sections/BlogSection";
 import { getAllPosts } from "../services/posts.service";
 import { FullPost } from "../types";
 

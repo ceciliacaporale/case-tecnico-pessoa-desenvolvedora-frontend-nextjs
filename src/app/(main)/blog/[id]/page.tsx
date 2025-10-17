@@ -1,8 +1,8 @@
 import { getPostById, getPostsByCategory } from "@/app/services/posts.service";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import HeroBlog from "@/components/organisms/HeroBlog";
-import RelatedPostsSection from "@/components/organisms/RelatedPostsSection";
+import HeroBlog from "@/components/sections/HeroBlog";
+import RelatedPostsSection from "@/components/sections/RelatedPostsSection";
 import BackgroundColor from "@/components/ui/BackgroundColor";
 
 interface PostPageProps {

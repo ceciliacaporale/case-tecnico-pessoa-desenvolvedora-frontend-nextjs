@@ -2,9 +2,9 @@
 
 import { useState, useMemo } from "react";
 import type { FullPost } from "@/app/types";
-import FilterBar from "../FilterBar";
-import PostGrid from "../PostGrid";
-import Pagination from "../../ui/Pagination";
+import FilterBar from "../../common/FilterBar";
+import PostGrid from "../../common/PostGrid";
+import Pagination from "../../common/Pagination";
 import Fuse from 'fuse.js';
 
 const POSTS_PER_PAGE = 6;

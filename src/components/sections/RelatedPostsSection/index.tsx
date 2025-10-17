@@ -1,5 +1,5 @@
 import type { FullPost } from "@/app/types"; 
-import PostCard from "@/components/organisms/PostCard";
+import PostCard from "@/components/common/PostCard";
 
 interface RelatedPostsSectionProps {
   posts: FullPost[];

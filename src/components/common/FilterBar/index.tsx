@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Plus } from "lucide-react";
-import SearchInput from "@/components/ui/SearchInput/SearchInput";
+import SearchInput from "@/components/common/SearchInput/SearchInput";
 import { Tag } from "@/components/ui/Tag";
 import { AVAILABLE_CATEGORIES } from "@/lib/constants";
 
