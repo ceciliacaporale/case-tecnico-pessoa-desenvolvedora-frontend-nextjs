@@ -4,7 +4,7 @@ Este repositório contém a solução para o desafio técnico de Pessoa Desenvol
 
 A aplicação consome uma API fake fornecida pela Alura para exibir posts, implementar filtros, paginação e uma página de detalhes para cada post.
 
-prod: https://case-tecnico-pessoa-desenvolvedora-frontend-nextjs-ioe77gj3w.vercel.app/
+[Produção](https://case-tecnico-pessoa-desenvolvedora.vercel.app/)
 
 ## ✨ Funcionalidades Implementadas
 
