@@ -37,7 +37,7 @@ export default function PostCard({ post }: CardProps) {
               alt={`Imagem de capa do post: ${post.title}`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover w-full h-auto rounded-[4px] transition-transform duration-300 group-hover:scale-[1.02]"
+              className="object-cover w-full h-auto rounded-[4px]"
             />
           </Link>
           )}
