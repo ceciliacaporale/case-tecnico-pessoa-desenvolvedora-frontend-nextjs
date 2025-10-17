@@ -17,7 +17,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className='flex w-full items-center justify-between px-4 py-4 sm:px-8 md:px-16 lg:px-20 md:mt-6 lg:mt-6 relative z-50 bg-background'>
+    <header className='w-full mx-auto max-w-[80%] md:max-w-[90%] xl:max-w-[1191px] flex items-center justify-between py-4 md:mt-6 lg:mt-6 relative z-50'>
       <div className='flex items-center gap-3'>
         <Link href='/' className='flex items-center gap-3'>
           <LogoIcon />
@@ -64,7 +64,7 @@ export const Header = () => {
       </div>
 
       {isOpen && (
-        <div className='absolute top-full left-0 w-full bg-background shadow-md md:hidden animate-fade-in'>
+        <div className='absolute top-full left-0 w-full bg-background shadow-md md:hidden animate-fade-in bg-primary-foreground'>
           <ul className='flex flex-col items-center gap-6 py-6'>
             {navLinks.map((link) => {
               const isActive =
