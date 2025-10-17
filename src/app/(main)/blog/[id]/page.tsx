@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import HeroBlog from "@/components/organisms/HeroBlog";
 import RelatedPostsSection from "@/components/organisms/RelatedPostsSection";
-import BackgroundColor from "@/components/atoms/BackgroundColor";
+import BackgroundColor from "@/components/ui/BackgroundColor";
 
 interface PostPageProps {
   params: { id: string } | Promise<{ id: string }>;

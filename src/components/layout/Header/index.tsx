@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
-import { LogoIcon } from '@/components/atoms/LogoIcon';
-import { ThemeToggle } from '@/components/molecules/ThemeToggle';
+import { LogoIcon } from '@/components/ui/LogoIcon';
+import { ThemeToggle } from '@/components/layout/ThemeToggle';
 
 const navLinks = [
   { href: '/', label: 'Início' },

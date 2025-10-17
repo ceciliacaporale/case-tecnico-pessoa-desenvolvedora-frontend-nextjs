@@ -1,8 +1,8 @@
-import '../globals.css'
+import './/globals.css'
 import { Inter, Chakra_Petch } from 'next/font/google'
 import { ReactNode } from 'react'
-import { Header } from '../../components/organisms/Header'
-import { Footer } from '@/components/organisms/Footer'
+import { Header } from '../components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
 
 const inter = Inter({
   subsets: ['latin'],

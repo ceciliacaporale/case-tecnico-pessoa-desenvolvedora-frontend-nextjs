@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import type { FullPost } from "@/app/types";
-import { CardTag } from "../../atoms/CardTag";
+import { CardTag } from "../../ui/CardTag";
 
 interface CardProps {
   post: FullPost;

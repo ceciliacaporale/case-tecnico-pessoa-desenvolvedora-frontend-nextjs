@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { FullPost } from "@/app/types";
-import { Tag } from "@/components/atoms/Tag";
+import { Tag } from "@/components/ui/Tag";
 
 interface HeroBlogProps {
   post: FullPost;

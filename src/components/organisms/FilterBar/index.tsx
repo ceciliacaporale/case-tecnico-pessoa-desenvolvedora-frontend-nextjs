@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Plus } from "lucide-react";
-import SearchInput from "@/components/atoms/SearchInput/SearchInput";
-import { Tag } from "@/components/atoms/Tag";
-import { AVAILABLE_CATEGORIES } from "@/app/(main)/blog/constants";
+import SearchInput from "@/components/ui/SearchInput/SearchInput";
+import { Tag } from "@/components/ui/Tag";
+import { AVAILABLE_CATEGORIES } from "@/lib/constants";
 
 interface FilterBarProps {
   searchValue: string;

@@ -3,24 +3,19 @@
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-chakra-petch), ui-sans-serif, system-ui, sans-serif;
-  
   --color-foreground: #284260;
   --color-primary: #1CA7C8;
   --color-primary-foreground: #FFFFFF;
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(211 41% 27%);
   --color-muted-foreground: #6e859f;
   --color-neutral:#9D9D9D;
 }
 
 .dark {
   --color-background: hsl(211 41% 10%);
-  --color-foreground: hsl(0 0% 98%);
-  --color-card: hsl(211 41% 15%);
-  --color-card-foreground: hsl(0 0% 98%);
+  --color-foreground: #fafafa;
   --color-primary: #1CA7C8;
   --color-primary-foreground: #0f1924;
-  --color-muted-foreground: #8fa1b8;
+  --color-muted-foreground: #FFFFFF;
   --color-neutral:#9D9D9D;
 }
 
@@ -30,6 +25,11 @@ body {
   font-family: var(--font-sans);
   margin: 0;
   padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @keyframes blink {

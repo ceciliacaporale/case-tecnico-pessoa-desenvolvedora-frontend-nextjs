@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import BackgroundColor from '@/components/atoms/BackgroundColor';
+import BackgroundColor from '@/components/ui/BackgroundColor';
 import TypeWriter from '@/components/animations/TypeWriter';
 
 export function HeroSection() {
