@@ -40,7 +40,7 @@ export default async function PostPage(props: PostPageProps) {
 
   return (
     <main className="relative overflow-x-hidden">
-      <BackgroundColor />
+      <BackgroundColor className="hidden md:block md:mt-[30px]" />
       <HeroBlog post={post} />
       <RelatedPostsSection posts={relatedPosts} />
     </main>
