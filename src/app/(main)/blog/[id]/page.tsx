@@ -6,7 +6,7 @@ import RelatedPostsSection from "@/components/organisms/RelatedPostsSection";
 import BackgroundColor from "@/components/ui/BackgroundColor";
 
 interface PostPageProps {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }
 
 export async function generateMetadata(props: PostPageProps): Promise<Metadata> {
