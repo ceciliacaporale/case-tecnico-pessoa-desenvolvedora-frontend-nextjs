@@ -1,4 +1,4 @@
-# AluraDev Blog - Case Técnico Frontend
+![Alura Header](./.github/assets/header-alura.png)
 
 Este repositório contém a solução para o desafio técnico de Pessoa Desenvolvedora Frontend da Alura. 
 
@@ -29,6 +29,8 @@ Seguindo os requisitos do desafio, a aplicação conta com as seguintes features
 ### Boas Práticas:
 - **SEO**: Uso de meta tags dinâmicas, title e description adequados para cada página, garantindo boa indexação.
 - **Acessibilidade (a11y)**: Implementação de semântica HTML correta, atributos ARIA e contraste de cores.
+
+![Resultados do Lighthouse](./.github/assets/lighthouse-scores.png)
 
 ### Bônus (Diferencial):
 - Implementação de Tema Dark/Light com toggle no header, persistindo a preferência do usuário.
