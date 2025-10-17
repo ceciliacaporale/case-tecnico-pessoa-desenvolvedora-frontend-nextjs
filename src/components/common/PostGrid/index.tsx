@@ -49,16 +49,14 @@ export default function PostGrid({ posts, isLoading }: PostGridProps) {
   }
 
   return (
-    <section
-    aria-live="polite"
-    aria-busy={isLoading ? "true" : "false"}
-    className="max-w-[80%] md:max-w-[90%] xl:max-w-[1191px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px] mx-auto lg:px-0"
+  <section
+  aria-live="polite"
+  aria-busy={isLoading ? "true" : "false"}
+  className="max-w-[80%] md:max-w-[90%] xl:max-w-[1191px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px] mx-auto justify-items-center md:justify-items-start lg:px-0"
   >
-    {isLoading
-      ? Array.from({ length: 6 }).map((_, index) => <PostCardSkeleton key={index} />)
-      : posts.map((post) => <PostCard key={post.id} post={post} />)}
+  {isLoading
+    ? Array.from({ length: 6 }).map((_, index) => <PostCardSkeleton key={index} />)
+    : posts.map((post) => <PostCard key={post.id} post={post} />)}
   </section>
-
   );
 }
-

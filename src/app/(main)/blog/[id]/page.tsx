@@ -31,7 +31,8 @@ export default async function PostPage(props: PostPageProps) {
   if (!post) notFound();
 
   const relatedPosts = (await getPostsByCategory(post.category.slug))
-    .filter(p => p.id !== post.id);
+    .filter(p => p.id !== post.id)
+    .slice(0, 3);
 
   return (
     <main className="relative overflow-x-hidden">
