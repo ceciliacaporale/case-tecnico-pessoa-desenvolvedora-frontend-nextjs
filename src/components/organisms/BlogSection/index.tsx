@@ -64,7 +64,7 @@ export function BlogSection({ initialPosts }: BlogSectionProps) {
   };
 
   return (
-    <section className="py-12 md:py-20">
+    <section>
       <FilterBar
         searchValue={searchTerm}
         onSearchChange={handleSearchChange}

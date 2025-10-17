@@ -60,10 +60,10 @@ export default function Pagination({
     }
   };
 
-  const baseStyles = `w-10 h-10 flex items-center justify-center rounded-md font-bold text-lg transition-colors duration-200`;
+  const baseStyles = `w-[32px] h-[40px] flex items-center justify-center rounded-md font-bold transition-colors duration-200`;
 
   return (
-    <nav aria-label="Paginação" className={cn("flex items-center justify-center gap-2 mt-12 mb-6", className)}>
+    <nav aria-label="Paginação" className={cn("flex items-center justify-center gap-4 mt-8", className)}>
       <button
         onClick={handlePrevious}
         disabled={currentPage === 1}

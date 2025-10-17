@@ -36,7 +36,7 @@ const ContactItem: React.FC<ContactItemProps> = ({ icon: Icon, label, href }) =>
 );
 
 export const ContactSection = () => (
-  <section className="max-w-[80%] md:max-w-[90%] xl:max-w-[1191px] mx-auto mt-8 lg:mt-26 flex flex-col md:flex-row place-items-center">
+  <section className="max-w-[80%] md:max-w-[90%] xl:max-w-[1263px] mx-auto mt-8 lg:mt-26 flex flex-col md:flex-row place-items-center">
     <div className="mb-10">
       <p className="font-heading font-bold text-[15px] sm:text-[14px] md:text-[16px] lg:text-[18px] text-primary">
         Vamos conversar?

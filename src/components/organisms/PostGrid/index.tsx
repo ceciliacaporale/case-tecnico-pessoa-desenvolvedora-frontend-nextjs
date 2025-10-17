@@ -52,7 +52,7 @@ export default function PostGrid({ posts, isLoading }: PostGridProps) {
     <section
     aria-live="polite"
     aria-busy={isLoading ? "true" : "false"}
-    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-12 justify-items-center"
+    className="max-w-[80%] md:max-w-[90%] xl:max-w-[1191px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px] mx-auto lg:px-0"
   >
     {isLoading
       ? Array.from({ length: 6 }).map((_, index) => <PostCardSkeleton key={index} />)
