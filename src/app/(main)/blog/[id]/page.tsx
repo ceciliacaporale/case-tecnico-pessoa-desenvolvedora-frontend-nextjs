@@ -6,11 +6,12 @@ import RelatedPostsSection from "@/components/organisms/RelatedPostsSection";
 import BackgroundColor from "@/components/ui/BackgroundColor";
 
 interface PostPageProps {
-  params: { id: string } | Promise<{ id: string }>;
+  params: Promise<{ id: string }>;
 }
 
 export async function generateMetadata(props: PostPageProps): Promise<Metadata> {
-  const { id } = await props.params;
+  const params = await props.params;
+  const { id } = params;
   const post = await getPostById(id);
 
   if (!post) {
@@ -24,7 +25,8 @@ export async function generateMetadata(props: PostPageProps): Promise<Metadata> 
 }
 
 export default async function PostPage(props: PostPageProps) {
-  const { id } = await props.params; 
+  const params = await props.params;
+  const { id } = params;
   const post = await getPostById(id);
 
   if (!post) {
