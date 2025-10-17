@@ -49,10 +49,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
       </head>
-      <body className="transition-colors duration-300 bg-white text-black dark:bg-black dark:text-white">
+      <body>
         <div className="flex min-h-screen flex-col">
           <Header />
-          <main className="flex-1 px-4 sm:px-0 md:px-0">{children}</main>
+          <main>{children}</main>
           <Footer />
         </div>
       </body>

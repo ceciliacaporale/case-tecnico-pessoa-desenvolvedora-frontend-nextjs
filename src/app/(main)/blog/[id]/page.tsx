@@ -25,18 +25,13 @@ export async function generateMetadata(props: PostPageProps): Promise<Metadata> 
 }
 
 export default async function PostPage(props: PostPageProps) {
-  const params = await props.params;
-  const { id } = params;
+  const { id } = await props.params;
   const post = await getPostById(id);
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) notFound();
 
-  const relatedPostsByCategory = await getPostsByCategory(post.category.slug);
-  const relatedPosts = relatedPostsByCategory
-    .filter(p => p.id !== post.id)
-    .slice(0, 3);
+  const relatedPosts = (await getPostsByCategory(post.category.slug))
+    .filter(p => p.id !== post.id);
 
   return (
     <main className="relative overflow-x-hidden">

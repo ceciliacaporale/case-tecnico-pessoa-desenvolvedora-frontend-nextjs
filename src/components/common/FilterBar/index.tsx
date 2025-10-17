@@ -98,7 +98,7 @@ export default function FilterBar({
                                   ${
                                     isActive
                                       ? "font-bold text-primary"
-                                      : "text-primary hover:text-white hover:bg-primary"
+                                      : "text-primary hover:bg-primary"
                                   }
                                 `}
                               >
