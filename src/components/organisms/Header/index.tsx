@@ -27,8 +27,8 @@ export const Header = () => {
         </Link>
       </div>
 
-      <nav className='hidden md:flex items-center gap-8'>
-        <ul className='flex items-center gap-8 sm:gap-10 md:gap-12'>
+      <nav className='hidden md:flex items-center gap-5'>
+        <ul className='flex items-center gap-8 sm:gap-6 md:gap-8'>
           {navLinks.map((link) => {
             const isActive =
               link.href === '/'
