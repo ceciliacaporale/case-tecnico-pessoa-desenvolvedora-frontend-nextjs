@@ -38,6 +38,7 @@ export default async function PostPage(props: PostPageProps) {
 
   return (
     <main className="relative overflow-x-hidden">
+      <BackgroundColor />
       <HeroBlog post={post} />
       <RelatedPostsSection posts={relatedPosts} />
     </main>
