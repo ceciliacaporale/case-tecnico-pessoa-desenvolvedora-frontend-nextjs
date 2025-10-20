@@ -78,7 +78,7 @@ export default function FilterBar({
                 <div className="relative" ref={dropdownRef}>
                   <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex items-center justify-center w-10 h-10 rounded-[4px] border border-primary bg-primary transition-transform duration-200 hover:scale-105"
+                    className="flex items-center justify-center w-10 h-10 rounded-[4px] border border-primary bg-foreground transition-transform duration-200 hover:scale-105"
                     aria-label="Mais categorias"
                   >
                     <Plus className="w-5 h-5 text-primary-foreground" />
@@ -98,7 +98,7 @@ export default function FilterBar({
                                   ${
                                     isActive
                                       ? "font-bold text-primary"
-                                      : "text-primary hover:bg-primary"
+                                      : "text-primary hover:bg-foreground"
                                   }
                                 `}
                               >
