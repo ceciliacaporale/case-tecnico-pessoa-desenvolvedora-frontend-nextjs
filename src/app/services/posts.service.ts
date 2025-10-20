@@ -10,13 +10,26 @@ if (!API_URL) {
 async function fetchApi<T>(endpoint: string): Promise<T | null> {
   const url = `${API_URL}/api/posts${endpoint}`;
   try {
-    const res = await fetch(url, { next: { revalidate: 3600 } });
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
+    
+    const res = await fetch(url, { 
+      next: { revalidate: 3600 },
+      signal: controller.signal,
+      headers: {
+        'Accept': 'application/json',
+      }
+    });
+    
+    clearTimeout(timeoutId);
+    
     if (!res.ok) {
-      throw new Error(`Falha ao buscar dados de ${url}. Status: ${res.status}`);
+      console.warn(`API retornou status ${res.status} para ${url}`);
+      return null;
     }
     return res.json() as Promise<T>;
   } catch (error) {
-    console.error("Erro no serviço de posts:", error);
+    console.warn("Erro ao buscar posts (usando fallback):", error);
     return null;
   }
 }
@@ -55,7 +68,10 @@ export const getPosts = cache(
 
 export const getAllPosts = cache(async (): Promise<FullPost[]> => {
   const firstPage = await getPosts(1, 9);
-  if (!firstPage?.pagination?.totalPages) return [];
+  if (!firstPage?.pagination?.totalPages) {
+    console.warn(" Não foi possível buscar primeira página, usando fallback vazio");
+    return [];
+  }
 
   const totalPages = firstPage.pagination.totalPages;
   let allPosts = firstPage.posts;
@@ -65,10 +81,14 @@ export const getAllPosts = cache(async (): Promise<FullPost[]> => {
     for (let page = 2; page <= totalPages; page++) {
       pagePromises.push(getPosts(page, 9));
     }
-    const subsequentPages = await Promise.all(pagePromises);
-    subsequentPages.forEach(pageResponse => {
-      if (pageResponse?.posts) {
-        allPosts = [...allPosts, ...pageResponse.posts];
+    
+    const results = await Promise.allSettled(pagePromises);
+    
+    results.forEach((result, index) => {
+      if (result.status === 'fulfilled' && result.value?.posts) {
+        allPosts = [...allPosts, ...result.value.posts];
+      } else if (result.status === 'rejected') {
+        console.warn(` Falha ao buscar página ${index + 2}, continuando...`);
       }
     });
   }
