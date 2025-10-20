@@ -11,7 +11,7 @@ async function fetchApi<T>(endpoint: string): Promise<T | null> {
   const url = `${API_URL}/api/posts${endpoint}`;
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000);
+    const timeoutId = setTimeout(() => controller.abort(), 30000);
     
     const res = await fetch(url, { 
       next: { revalidate: 3600 },
