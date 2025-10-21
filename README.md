@@ -1,9 +1,4 @@
 ![Alura Header](./.github/assets/header-alura.png)
-> **Nota sobre os Deploys:**
->
-> Alguns commits realizados em 20/10/2025 podem apresentar falha (❌) no "check" de deploy do GitHub.
->
-> Isso ocorreu devido a um incidente generalizado na plataforma da Vercel (veja [Vercel Status](https://vercel-status.com/)), que afetou a "criação de implantações" mesmo após o build ser concluído com sucesso (como pode ser visto nos logs de build).
 
 Este repositório contém a solução para o desafio técnico de Pessoa Desenvolvedora Frontend da Alura. 
 
